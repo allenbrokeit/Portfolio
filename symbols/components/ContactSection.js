@@ -32,8 +32,11 @@ export const ContactSection = {
 
   ContactCta: {
     extends: 'MagneticButton',
+    tag: 'a',
+    href: 'mailto:allenbrokeit@gmail.com',
     text: 'Get in Touch',
     icon: 'mail',
+    textDecoration: 'none',
   },
 
   SocialLinks: {
@@ -43,7 +46,7 @@ export const ContactSection = {
 
     GithubLink: {
       extends: 'Link',
-      href: 'https://github.com',
+      href: 'https://github.com/allenbrokeit',
       target: '_blank',
       rel: 'noopener noreferrer',
       flow: 'x',
@@ -64,7 +67,7 @@ export const ContactSection = {
 
     LinkedinLink: {
       extends: 'Link',
-      href: 'https://linkedin.com',
+      href: 'https://www.linkedin.com/in/g-allen-johnson/',
       target: '_blank',
       rel: 'noopener noreferrer',
       flow: 'x',

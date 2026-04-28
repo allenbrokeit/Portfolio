@@ -37,6 +37,7 @@ export const ContactSection = {
     href: 'mailto:allenbrokeit@gmail.com',
     text: 'Get in Touch',
     icon: 'mail',
+    gap: 'X',
     textDecoration: 'none',
   },
 

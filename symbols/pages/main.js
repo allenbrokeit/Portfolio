@@ -37,7 +37,7 @@ export const main = {
     marginTop: 'D',
 
     FooterText: {
-      text: '© 2026 Allen. Built with Symbols & DOMQL3.',
+      text: '© 2026 G. Allen Johnson. Built with Symbols & DOMQL3.',
       fontSize: 'Y',
       color: 'disabled',
     },

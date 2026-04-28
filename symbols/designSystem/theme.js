@@ -1,7 +1,8 @@
 export default {
+  // Default template themes
   document: {
     '@dark': {
-      background: 'codGray',
+      background: 'surface',
       color: 'title',
     },
     '@light': {
@@ -77,5 +78,57 @@ export default {
   transparent: {
     color: 'currentColor',
     background: 'transparent',
+  },
+
+  // Portfolio "Cyber-Gloss" themes
+  glass: {
+    '@dark': {
+      background: 'white.03',
+      color: 'title',
+      backdropFilter: 'blur(16px)',
+      borderColor: 'white.08',
+    },
+    '@light': {
+      background: 'gray.95+150',
+      color: 'title',
+      backdropFilter: 'blur(16px)',
+      borderColor: 'gray.1',
+    },
+  },
+  'glass-elevated': {
+    '@dark': {
+      background: 'white.06',
+      color: 'title',
+      backdropFilter: 'blur(24px)',
+      borderColor: 'white.12',
+    },
+    '@light': {
+      background: 'gray.9+140',
+      color: 'title',
+      backdropFilter: 'blur(24px)',
+      borderColor: 'gray.15',
+    },
+  },
+  hero: {
+    '@dark': {
+      background: 'surface',
+      color: 'white',
+    },
+    '@light': {
+      background: 'white',
+      color: 'codGray',
+    },
+  },
+  badge: {
+    '@dark': {
+      background: 'white.06',
+      color: 'cyber',
+      borderColor: 'cyber.15',
+    },
+    '@light': {
+      background: 'blue.08',
+      color: 'blue',
+      borderColor: 'blue.2',
+    },
   },
 }

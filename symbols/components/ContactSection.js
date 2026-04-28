@@ -8,6 +8,7 @@ export const ContactSection = {
   zIndex: '1',
 
   attr: {
+    id: 'contact',
     'aria-label': 'Contact section',
   },
 
@@ -23,7 +24,7 @@ export const ContactSection = {
   },
 
   ContactSubtitle: {
-    text: 'Open to new roles, collaborations, and challenging QA automation projects.',
+    text: 'Open to new roles, collaborations, and challenging development projects.',
     fontSize: 'A',
     color: 'paragraph',
     maxWidth: '60%',

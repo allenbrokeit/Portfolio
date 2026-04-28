@@ -102,7 +102,12 @@ export const HeroSection = {
     align: 'center center',
     gap: 'Y',
     opacity: '.5',
+    cursor: 'pointer',
     animation: 'fadeInUp 2s ease-in-out infinite alternate',
+
+    onClick: (e, el) => {
+      window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })
+    },
 
     ScrollIcon: {
       extends: 'Icon',

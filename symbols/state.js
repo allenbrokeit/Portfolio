@@ -1,6 +1,6 @@
 export default {
   profile: {
-    name: 'Allen',
+    name: 'Allen Johnson',
     headline: 'Senior Software QA Automation Engineer & Tech Lead',
     location: 'Davao City, Philippines',
     status: 'Actively seeking new professional opportunities',

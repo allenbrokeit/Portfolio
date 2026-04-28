@@ -1,0 +1,917 @@
+{
+  "useReset": true,
+  "useVariable": true,
+  "useFontImport": true,
+  "useIconSprite": true,
+  "useSvgSprite": true,
+  "useDefaultConfig": true,
+  "useDocumentTheme": true,
+  "verbose": false,
+  "globalTheme": "dark",
+  "cases": {},
+  "state": {
+    "profile": {
+      "name": "Allen Johnson",
+      "headline": "Senior Software QA Automation Engineer & Tech Lead",
+      "location": "Davao City, Philippines",
+      "status": "Actively seeking new professional opportunities",
+      "coreSkills": [
+        "Java",
+        "Kotlin",
+        "Swift",
+        "Javascript",
+        "UI Testing",
+        "API Testing",
+        "Integration Testing",
+        "Unit Testing",
+        "Test automation frameworks",
+        "Mobile testing",
+        "JUnit",
+        "Selenium WebDriver",
+        "Cucumber",
+        "TestCafe",
+        "Tape",
+        "Postman",
+        "cURL",
+        "Charles Proxy",
+        "Espresso",
+        "XCUITest",
+        "Test planning",
+        "Test case design",
+        "Requirements gathering",
+        "Git",
+        "Jenkins",
+        "JIRA",
+        "Confluence",
+        "Pivotal Tracker",
+        "Continuous Integration",
+        "Android Studio",
+        "Xcode",
+        "IntelliJ",
+        "VS Code",
+        "Google Antigravity",
+        "Gemini CLI Code Assist"
+      ]
+    },
+    "projects": [
+      {
+        "id": "proj_1",
+        "title": "Visual Node-Based Automation Editor",
+        "summary": "A spatial IDE for constructing automated test workflows via an infinite node-graph interface, featuring Bezier curve wiring and JSON serialization.",
+        "tags": [
+          "DOMQL3",
+          "State Management",
+          "SVG Render"
+        ],
+        "bentoSize": "large"
+      },
+      {
+        "id": "proj_2",
+        "title": "Spatial 'Cyber-Deck' Lore Canvas",
+        "summary": "A free-form glassmorphism whiteboard environment for mapping intricate relationships with active Z-index stacking.",
+        "tags": [
+          "DOMQL3",
+          "Spatial Computing",
+          "UI/UX"
+        ],
+        "bentoSize": "medium"
+      },
+      {
+        "id": "proj_3",
+        "title": "Multi-Track Timeline Sequencer",
+        "summary": "A synchronized DAW-style timeline for sequencing high-density events with real-time DOM-to-time spatial manipulation.",
+        "tags": [
+          "DOMQL3",
+          "Algorithms",
+          "Performance"
+        ],
+        "bentoSize": "large"
+      },
+      {
+        "id": "proj_4",
+        "title": "Automated QA Test Run Dashboard",
+        "summary": "A transactional execution environment for regression runs with high-density data grids and real-time metric aggregation.",
+        "tags": [
+          "SQLite",
+          "API Middleware",
+          "Data Visualization"
+        ],
+        "bentoSize": "medium"
+      }
+    ]
+  },
+  "dependencies": {
+    "smbls": "3.8.9"
+  },
+  "components": {
+    "AmbientOrb": {
+      "position": "fixed",
+      "width": "H",
+      "height": "H",
+      "borderRadius": "50%",
+      "background": "cyber",
+      "opacity": ".3",
+      "filter": "blur(120px)",
+      "pointerEvents": "none",
+      "zIndex": "0",
+      "top": "20%",
+      "left": "60%",
+      "animation": "orbFloat 20s ease-in-out infinite"
+    },
+    "AmbientOrbSecondary": {
+      "position": "fixed",
+      "width": "G",
+      "height": "G",
+      "borderRadius": "50%",
+      "background": "neon",
+      "opacity": ".2",
+      "filter": "blur(100px)",
+      "pointerEvents": "none",
+      "zIndex": "0",
+      "top": "60%",
+      "left": "20%",
+      "animation": "orbFloat 25s ease-in-out infinite reverse"
+    },
+    "BentoProjectGrid": {
+      "tag": "section",
+      "display": "grid",
+      "gridTemplateColumns": "repeat(3, 1fr)",
+      "gap": "A",
+      "padding": "0 B",
+      "maxWidth": "90%",
+      "margin": "0 auto",
+      "position": "relative",
+      "zIndex": "1",
+      "attr": {
+        "aria-label": "Project showcase grid"
+      },
+      "@tabletS": {
+        "gridTemplateColumns": "repeat(2, 1fr)"
+      },
+      "@mobileL": {
+        "gridTemplateColumns": "1fr",
+        "padding": "0 A"
+      },
+      "SectionTitle": {
+        "tag": "h2",
+        "gridColumn": "1 / -1",
+        "text": "Featured Projects",
+        "fontSize": "D",
+        "fontWeight": "700",
+        "color": "white",
+        "marginBottom": "A",
+        "@mobileL": {
+          "fontSize": "C"
+        }
+      },
+      "ProjectsContainer": {
+        "display": "grid",
+        "gridTemplateColumns": "repeat(3, 1fr)",
+        "gap": "A",
+        "gridColumn": "1 / -1",
+        "@tabletS": {
+          "gridTemplateColumns": "repeat(2, 1fr)"
+        },
+        "@mobileL": {
+          "gridTemplateColumns": "1fr"
+        },
+        "children": "(el, s) => s.root.projects",
+        "childExtends": "InteractiveProjectTile",
+        "childrenAs": "state"
+      },
+      "GridScrollIndicator": {
+        "gridColumn": "1 / -1",
+        "flow": "y",
+        "align": "center center",
+        "gap": "Y",
+        "marginTop": "B",
+        "opacity": ".5",
+        "cursor": "pointer",
+        "animation": "fadeInUp 2s ease-in-out infinite alternate",
+        "transition": "opacity 0.2s ease",
+        ":hover": {
+          "opacity": "1"
+        },
+        "onClick": "(e, el) => {\n      var target = document.getElementById(\"contact\");\n      if (target) target.scrollIntoView({ behavior: \"smooth\" });\n    }",
+        "GridScrollIcon": {
+          "extends": "Icon",
+          "icon": "chevronDown",
+          "width": "B",
+          "height": "B",
+          "color": "cyber"
+        }
+      }
+    },
+    "ContactSection": {
+      "flow": "y",
+      "align": "center center",
+      "gap": "B",
+      "padding": "F B",
+      "textAlign": "center",
+      "position": "relative",
+      "zIndex": "1",
+      "attr": {
+        "id": "contact",
+        "aria-label": "Contact section"
+      },
+      "ContactTitle": {
+        "tag": "h2",
+        "text": "Let's Build Something",
+        "fontSize": "D",
+        "fontWeight": "700",
+        "color": "white",
+        "@mobileL": {
+          "fontSize": "C"
+        }
+      },
+      "ContactSubtitle": {
+        "text": "Open to new roles, collaborations, and challenging development projects.",
+        "fontSize": "A",
+        "color": "paragraph",
+        "maxWidth": "60%",
+        "lineHeight": "1.6"
+      },
+      "ContactCta": {
+        "extends": "MagneticButton",
+        "tag": "a",
+        "href": "mailto:allenbrokeit@gmail.com",
+        "text": "Get in Touch",
+        "icon": "mail",
+        "textDecoration": "none"
+      },
+      "SocialLinks": {
+        "flow": "x",
+        "gap": "B",
+        "marginTop": "A",
+        "GithubLink": {
+          "extends": "Link",
+          "href": "https://github.com/allenbrokeit",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "flow": "x",
+          "align": "center center",
+          "gap": "Y",
+          "color": "caption",
+          "transition": "color 0.2s ease",
+          ":hover": {
+            "color": "cyber"
+          },
+          "GithubIcon": {
+            "extends": "Icon",
+            "icon": "github",
+            "width": "B",
+            "height": "B"
+          }
+        },
+        "LinkedinLink": {
+          "extends": "Link",
+          "href": "https://www.linkedin.com/in/g-allen-johnson/",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "flow": "x",
+          "align": "center center",
+          "gap": "Y",
+          "color": "caption",
+          "transition": "color 0.2s ease",
+          ":hover": {
+            "color": "cyber"
+          },
+          "LinkedinIcon": {
+            "extends": "Icon",
+            "icon": "linkedin",
+            "width": "B",
+            "height": "B"
+          }
+        }
+      }
+    },
+    "GlassCard": {
+      "flow": "y",
+      "theme": "glass",
+      "padding": "B",
+      "borderRadius": "Z",
+      "border": "1px solid white.08",
+      "position": "relative",
+      "overflow": "hidden",
+      "transition": "all 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
+      ":hover": {
+        "borderColor": "white.15"
+      }
+    },
+    "HeroSection": {
+      "tag": "section",
+      "flow": "y",
+      "align": "center center",
+      "minHeight": "100vh",
+      "position": "relative",
+      "zIndex": "1",
+      "padding": "D B",
+      "gap": "B",
+      "textAlign": "center",
+      "attr": {
+        "aria-label": "Hero introduction section"
+      },
+      "HeroContent": {
+        "flow": "y",
+        "align": "center center",
+        "gap": "A",
+        "maxWidth": "80%",
+        "HeroTitle": {
+          "tag": "h1",
+          "text": "(el, s) => s.root.profile.name",
+          "fontSize": "H",
+          "fontWeight": "800",
+          "letterSpacing": "-0.04em",
+          "lineHeight": "0.9",
+          "color": "white",
+          "@tabletS": {
+            "fontSize": "G"
+          },
+          "@mobileL": {
+            "fontSize": "F"
+          }
+        },
+        "HeroHeadline": {
+          "tag": "h2",
+          "text": "(el, s) => s.root.profile.headline",
+          "fontSize": "B",
+          "fontWeight": "400",
+          "color": "caption",
+          "lineHeight": "1.4",
+          "maxWidth": "70%",
+          "@mobileL": {
+            "fontSize": "A"
+          }
+        },
+        "HeroMeta": {
+          "flow": "x",
+          "flexWrap": "wrap",
+          "align": "center center",
+          "gap": "A",
+          "marginTop": "Z",
+          "LocationMeta": {
+            "flow": "x",
+            "align": "center center",
+            "gap": "Y",
+            "color": "paragraph",
+            "LocationIcon": {
+              "extends": "Icon",
+              "icon": "mapPin",
+              "width": "A",
+              "height": "A",
+              "color": "cyber"
+            },
+            "LocationText": {
+              "tag": "span",
+              "text": "(el, s) => s.root.profile.location",
+              "fontSize": "Z"
+            }
+          },
+          "StatusMeta": {
+            "flow": "x",
+            "align": "center center",
+            "gap": "Y",
+            "color": "paragraph",
+            "StatusIcon": {
+              "extends": "Icon",
+              "icon": "briefcase",
+              "width": "A",
+              "height": "A",
+              "color": "neon"
+            },
+            "StatusText": {
+              "tag": "span",
+              "text": "(el, s) => s.root.profile.status",
+              "fontSize": "Z"
+            }
+          }
+        }
+      },
+      "ScrollIndicator": {
+        "position": "absolute",
+        "bottom": "C",
+        "flow": "y",
+        "align": "center center",
+        "gap": "Y",
+        "opacity": ".5",
+        "cursor": "pointer",
+        "animation": "fadeInUp 2s ease-in-out infinite alternate",
+        "onClick": "(e, el) => {\n      window.scrollTo({ top: window.innerHeight, behavior: \"smooth\" });\n    }",
+        "ScrollIcon": {
+          "extends": "Icon",
+          "icon": "chevronDown",
+          "width": "B",
+          "height": "B",
+          "color": "cyber"
+        }
+      }
+    },
+    "InteractiveProjectTile": {
+      "extends": "GlassCard",
+      "cursor": "pointer",
+      "transition": "transform 0.15s ease-out, border-color 0.3s ease",
+      "willChange": "transform",
+      "onMouseMove": "(e, el) => el.call(\"applyTilt\", e)",
+      "onMouseLeave": "(e, el) => el.call(\"resetTilt\")",
+      "attr": {
+        "aria-label": "(el, s) => \"Project: \" + (s.title || \"\")"
+      },
+      "TileContent": {
+        "flow": "y",
+        "gap": "A",
+        "TileHeader": {
+          "flow": "x",
+          "align": "center space-between",
+          "gap": "Z",
+          "TileTitle": {
+            "tag": "h3",
+            "text": "(el, s) => s.title",
+            "fontSize": "A",
+            "fontWeight": "700",
+            "color": "white",
+            "lineHeight": "1.2"
+          },
+          "TileLinkIcon": {
+            "extends": "Icon",
+            "icon": "externalLink",
+            "width": "A",
+            "height": "A",
+            "color": "cyber",
+            "opacity": ".5",
+            "transition": "opacity 0.2s ease",
+            ":hover": {
+              "opacity": "1"
+            }
+          }
+        },
+        "TileSummary": {
+          "text": "(el, s) => s.summary",
+          "fontSize": "Z",
+          "color": "paragraph",
+          "lineHeight": "1.6"
+        },
+        "TileTagList": {
+          "flow": "x",
+          "flexWrap": "wrap",
+          "gap": "Y",
+          "marginTop": "Y",
+          "children": "(el, s) => (s.tags || []).map(function mapTag(tag) {\n        return { text: tag };\n      })",
+          "childExtends": "TechBadge"
+        }
+      },
+      "isLarge": "(el, s) => s.bentoSize === \"large\"",
+      ".isLarge": {
+        "gridColumn": "span 2",
+        "@mobileL": {
+          "gridColumn": "span 1"
+        }
+      },
+      "isMedium": "(el, s) => s.bentoSize === \"medium\"",
+      ".isMedium": {
+        "gridColumn": "span 1"
+      }
+    },
+    "MagneticButton": {
+      "extends": "Button",
+      "theme": "glass-elevated",
+      "padding": "Z1 B",
+      "fontSize": "Z",
+      "fontWeight": "600",
+      "borderRadius": "Z",
+      "border": "1px solid cyber.25",
+      "color": "cyber",
+      "cursor": "pointer",
+      "transition": "transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, background 0.3s ease",
+      "position": "relative",
+      "zIndex": "1",
+      "onMouseMove": "(e, el) => el.call(\"applyMagnetic\", e)",
+      "onMouseLeave": "(e, el) => el.call(\"resetMagnetic\")",
+      ":hover": {
+        "borderColor": "cyber.5",
+        "background": "cyber.08"
+      },
+      ":active": {
+        "transform": "scale(0.97)"
+      }
+    },
+    "ScrollRevealSection": {
+      "tag": "section",
+      "flow": "y",
+      "position": "relative",
+      "zIndex": "1",
+      "onRender": "(el) => {\n    if (el.__initialized) return;\n    el.__initialized = true;\n    el.call(\"initScrollReveal\");\n  }"
+    },
+    "SpotlightWrapper": {
+      "position": "relative",
+      "overflow": "hidden",
+      "onMouseMove": "(e, el) => {\n    var rect = el.node.getBoundingClientRect();\n    var x = e.clientX - rect.left;\n    var y = e.clientY - rect.top;\n    el.node.style.setProperty(\"--spotlight-x\", x + \"px\");\n    el.node.style.setProperty(\"--spotlight-y\", y + \"px\");\n  }",
+      "onMouseLeave": "(e, el) => {\n    el.node.style.removeProperty(\"--spotlight-x\");\n    el.node.style.removeProperty(\"--spotlight-y\");\n  }",
+      "style": {
+        "background": "radial-gradient(600px circle at var(--spotlight-x, 50%) var(--spotlight-y, 50%), rgba(0, 240, 255, 0.04), transparent 40%)"
+      }
+    },
+    "TechBadge": {
+      "tag": "span",
+      "theme": "badge",
+      "padding": "X Z",
+      "borderRadius": "Y",
+      "border": "1px solid cyber.15",
+      "fontSize": "Y",
+      "fontWeight": "500",
+      "letterSpacing": "0.02em",
+      "whiteSpace": "nowrap",
+      "transition": "all 0.2s ease",
+      "text": "(el, s) => s.label || s.text || s",
+      ":hover": {
+        "borderColor": "cyber.35",
+        "background": "cyber.08"
+      }
+    },
+    "TechMarquee": {
+      "flow": "y",
+      "gap": "B",
+      "overflow": "hidden",
+      "padding": "C 0",
+      "position": "relative",
+      "zIndex": "1",
+      "attr": {
+        "aria-label": "Technology skills marquee"
+      },
+      "MarqueeTitle": {
+        "tag": "h3",
+        "text": "Tech Ecosystem",
+        "fontSize": "C",
+        "fontWeight": "700",
+        "color": "white",
+        "textAlign": "center",
+        "marginBottom": "A"
+      },
+      "MarqueeTrack": {
+        "flow": "x",
+        "gap": "Z",
+        "width": "max-content",
+        "animation": "marquee 30s linear infinite",
+        "MarqueeSet1": {
+          "flow": "x",
+          "gap": "Z",
+          "children": "(el, s) => (s.root.profile.coreSkills || []).map(function mapSkill(skill) {\n        return { text: skill };\n      })",
+          "childExtends": "TechBadge"
+        },
+        "MarqueeSet2": {
+          "flow": "x",
+          "gap": "Z",
+          "children": "(el, s) => (s.root.profile.coreSkills || []).map(function mapSkill(skill) {\n        return { text: skill };\n      })",
+          "childExtends": "TechBadge"
+        }
+      }
+    }
+  },
+  "snippets": {},
+  "pages": {
+    "/": {
+      "extends": "Page",
+      "flow": "y",
+      "background": "surface",
+      "position": "relative",
+      "overflow": "hidden",
+      "AmbientOrb": {},
+      "AmbientOrbSecondary": {},
+      "HeroSection": {},
+      "TechSection": {
+        "extends": "ScrollRevealSection",
+        "TechMarquee": {}
+      },
+      "ProjectSection": {
+        "extends": "ScrollRevealSection",
+        "padding": "D 0",
+        "SpotlightWrapper": {
+          "BentoProjectGrid": {}
+        }
+      },
+      "ContactReveal": {
+        "extends": "ScrollRevealSection",
+        "ContactSection": {}
+      },
+      "FooterBar": {
+        "tag": "footer",
+        "flow": "x",
+        "align": "center center",
+        "padding": "B",
+        "borderTop": "1px solid white.06",
+        "marginTop": "D",
+        "FooterText": {
+          "text": "© 2026 Allen. Built with Symbols & DOMQL3.",
+          "fontSize": "Y",
+          "color": "disabled"
+        }
+      }
+    }
+  },
+  "functions": {
+    "applyMagnetic": "function applyMagnetic2(event) {\n  const node = this.node;\n  if (!node) return;\n  var rect = node.getBoundingClientRect();\n  var centerX = rect.left + rect.width / 2;\n  var centerY = rect.top + rect.height / 2;\n  var distX = event.clientX - centerX;\n  var distY = event.clientY - centerY;\n  var distance = Math.sqrt(distX * distX + distY * distY);\n  var proximity = 80;\n  if (distance < proximity) {\n    var strength = (1 - distance / proximity) * 0.35;\n    var moveX = distX * strength;\n    var moveY = distY * strength;\n    node.style.transform = \"translate(\" + moveX + \"px, \" + moveY + \"px)\";\n  } else {\n    node.style.transform = \"translate(0, 0)\";\n  }\n}",
+    "applyTilt": "function applyTilt2(event) {\n  const node = this.node;\n  if (!node) return;\n  const rect = node.getBoundingClientRect();\n  const x = event.clientX - rect.left;\n  const y = event.clientY - rect.top;\n  const centerX = rect.width / 2;\n  const centerY = rect.height / 2;\n  const rotateX = (y - centerY) / centerY * -5;\n  const rotateY = (x - centerX) / centerX * 5;\n  node.style.transform = \"perspective(1000px) rotateX(\" + rotateX + \"deg) rotateY(\" + rotateY + \"deg) scale3d(1.02, 1.02, 1.02)\";\n}",
+    "initScrollReveal": "function initScrollReveal2() {\n  const node = this.node;\n  if (!node || this.__scrollInitialized) return;\n  this.__scrollInitialized = true;\n  node.style.opacity = \"0\";\n  node.style.transform = \"translateY(40px)\";\n  node.style.transition = \"opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)\";\n  const observer = new IntersectionObserver(\n    function onIntersect(entries) {\n      entries.forEach(function handleEntry(entry) {\n        if (entry.isIntersecting) {\n          entry.target.style.opacity = \"1\";\n          entry.target.style.transform = \"translateY(0)\";\n          observer.unobserve(entry.target);\n        }\n      });\n    },\n    { threshold: 0.1, rootMargin: \"0px 0px -50px 0px\" }\n  );\n  observer.observe(node);\n}",
+    "resetMagnetic": "function resetMagnetic2() {\n  var node = this.node;\n  if (!node) return;\n  node.style.transform = \"translate(0, 0)\";\n}",
+    "resetTilt": "function resetTilt2() {\n  const node = this.node;\n  if (!node) return;\n  node.style.transform = \"perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)\";\n}"
+  },
+  "methods": {},
+  "designSystem": {
+    "color": {
+      "green": "#389d34",
+      "red": "#e15c55",
+      "yellow": "#EDCB38",
+      "orange": "#e97c16",
+      "transparent": "rgba(0, 0, 0, 0)",
+      "black": "black",
+      "gray": "#4e4e50",
+      "white": "#ffffff",
+      "title": [
+        "--gray 1 -168",
+        "--gray 1 +168"
+      ],
+      "caption": [
+        "--gray 1 -68",
+        "--gray 1 +68"
+      ],
+      "paragraph": [
+        "--gray 1 -42",
+        "--gray 1 +42"
+      ],
+      "disabled": [
+        "--gray 1 -26",
+        "--gray 1 +26"
+      ],
+      "line": [
+        "--gray 1 -16",
+        "--gray 1 +16"
+      ],
+      "codGray": "#171717",
+      "blue": "#0474f2",
+      "cyber": "#00f0ff",
+      "neon": "#8b5cf6",
+      "surface": "#09090b",
+      "glass": "#18181b",
+      "glow": "#06b6d4"
+    },
+    "gradient": {},
+    "theme": {
+      "document": {
+        "@dark": {
+          "background": "surface",
+          "color": "title"
+        },
+        "@light": {
+          "background": "gray 1 +168",
+          "color": "title"
+        }
+      },
+      "dialog": {
+        "@dark": {
+          "background": "gray 0.95 -68",
+          "color": "title",
+          "backdropFilter": "blur(3px)",
+          "borderColor": "gray 0",
+          "outlineColor": "blue"
+        },
+        "@light": {
+          "background": "gray .95 +150",
+          "color": "title",
+          "backdropFilter": "blur(3px)",
+          "borderColor": "gray 0",
+          "outlineColor": "blue"
+        }
+      },
+      "field": {
+        "@dark": {
+          "color": "white",
+          "background": "gray 0.95 -65",
+          "::placeholder": {
+            "color": "white 1 -78"
+          }
+        },
+        "@light": {
+          "color": "black",
+          "::placeholder": {
+            "color": "gray 1 -68"
+          }
+        }
+      },
+      "primary": {
+        "@dark": {
+          "background": "blue",
+          "color": "white"
+        },
+        "@light": {
+          "color": "white",
+          "background": "blue"
+        }
+      },
+      "warning": {
+        "@dark": {
+          "background": "red",
+          "color": "white"
+        },
+        "@light": {
+          "color": "white",
+          "background": "red"
+        }
+      },
+      "success": {
+        "@dark": {
+          "background": "green",
+          "color": "white"
+        },
+        "@light": {
+          "background": "green",
+          "color": "white"
+        }
+      },
+      "none": {
+        "color": "none",
+        "background": "none"
+      },
+      "transparent": {
+        "color": "currentColor",
+        "background": "transparent"
+      },
+      "glass": {
+        "@dark": {
+          "background": "white.03",
+          "color": "title",
+          "backdropFilter": "blur(16px)",
+          "borderColor": "white.08"
+        },
+        "@light": {
+          "background": "gray.95+150",
+          "color": "title",
+          "backdropFilter": "blur(16px)",
+          "borderColor": "gray.1"
+        }
+      },
+      "glass-elevated": {
+        "@dark": {
+          "background": "white.06",
+          "color": "title",
+          "backdropFilter": "blur(24px)",
+          "borderColor": "white.12"
+        },
+        "@light": {
+          "background": "gray.9+140",
+          "color": "title",
+          "backdropFilter": "blur(24px)",
+          "borderColor": "gray.15"
+        }
+      },
+      "hero": {
+        "@dark": {
+          "background": "surface",
+          "color": "white"
+        },
+        "@light": {
+          "background": "white",
+          "color": "codGray"
+        }
+      },
+      "badge": {
+        "@dark": {
+          "background": "white.06",
+          "color": "cyber",
+          "borderColor": "cyber.15"
+        },
+        "@light": {
+          "background": "blue.08",
+          "color": "blue",
+          "borderColor": "blue.2"
+        }
+      }
+    },
+    "font": {},
+    "font_family": {
+      "Default": {
+        "isDefault": true,
+        "value": [
+          "Inter, system-ui, -apple-system, sans-serif"
+        ],
+        "type": "sans-serif",
+        "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      },
+      "Mono": {
+        "value": [
+          "JetBrains Mono, Fira Code, monospace"
+        ],
+        "type": "monospace",
+        "url": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap"
+      }
+    },
+    "typography": {
+      "base": 16,
+      "ratio": 1.25,
+      "subSequence": true
+    },
+    "spacing": {
+      "base": 16,
+      "ratio": 1.618,
+      "subSequence": true
+    },
+    "timing": {
+      "defaultBezier": "cubic-bezier(.29, .67, .51, .97)"
+    },
+    "class": {},
+    "grid": {},
+    "icons": {
+      "mapPin": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"12\" cy=\"10\" r=\"3\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></svg>",
+      "briefcase": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"2\" y=\"7\" width=\"20\" height=\"14\" rx=\"2\" ry=\"2\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+      "chevronDown": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M6 9l6 6 6-6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+      "mail": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"2\" y=\"4\" width=\"20\" height=\"16\" rx=\"2\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M22 7l-10 7L2 7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+      "github": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0022 12.017C22 6.484 17.522 2 12 2z\" fill=\"currentColor\"/></svg>",
+      "linkedin": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><rect x=\"2\" y=\"9\" width=\"4\" height=\"12\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"4\" cy=\"4\" r=\"2\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></svg>",
+      "externalLink": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+      "code": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M16 18l6-6-6-6M8 6l-6 6 6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+      "arrowRight": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M5 12h14M12 5l7 7-7 7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+      "sparkles": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8L12 2z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+    },
+    "shape": {},
+    "reset": {},
+    "animation": {
+      "fadeInUp": {
+        "from": {
+          "transform": "translate3d(0, 12.5%, 1px)",
+          "opacity": 0
+        },
+        "to": {
+          "transform": "translate3d(0, 0, 1px)",
+          "opacity": 1
+        }
+      },
+      "fadeOutDown": {
+        "from": {
+          "transform": "translate3d(0, 0, 1px)",
+          "opacity": 1
+        },
+        "to": {
+          "transform": "translate3d(0, 12.5%, 1px)",
+          "opacity": 0
+        }
+      },
+      "marquee": {
+        "from": {
+          "transform": "translate3d(0, 0, 1px)"
+        },
+        "to": {
+          "transform": "translate3d(-50%, 0, 1px)"
+        }
+      },
+      "orbFloat": {
+        "0%": {
+          "transform": "translate3d(0, 0, 1px)"
+        },
+        "33%": {
+          "transform": "translate3d(5%, -8%, 1px)"
+        },
+        "66%": {
+          "transform": "translate3d(-3%, 4%, 1px)"
+        },
+        "100%": {
+          "transform": "translate3d(0, 0, 1px)"
+        }
+      },
+      "orbColorShift": {
+        "0%": {
+          "opacity": 0.4
+        },
+        "50%": {
+          "opacity": 0.6
+        },
+        "100%": {
+          "opacity": 0.4
+        }
+      },
+      "pulseGlow": {
+        "0%": {
+          "boxShadow": "0 0 0 0 rgba(0, 240, 255, 0.4)"
+        },
+        "70%": {
+          "boxShadow": "0 0 0 10px rgba(0, 240, 255, 0)"
+        },
+        "100%": {
+          "boxShadow": "0 0 0 0 rgba(0, 240, 255, 0)"
+        }
+      }
+    },
+    "media": {}
+  },
+  "files": {},
+  "sharedLibraries": [],
+  "envs": {},
+  "schema": {
+    "dependencies": {
+      "smbls": {
+        "key": "smbls",
+        "resolvedVersion": "3.8.9",
+        "type": "dependency",
+        "version": "3.8.9",
+        "status": "done"
+      }
+    }
+  }
+}

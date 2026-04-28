@@ -51,4 +51,33 @@ export const BentoProjectGrid = {
     childExtends: 'InteractiveProjectTile',
     childrenAs: 'state',
   },
+
+  GridScrollIndicator: {
+    gridColumn: '1 / -1',
+    flow: 'y',
+    align: 'center center',
+    gap: 'Y',
+    marginTop: 'B',
+    opacity: '.5',
+    cursor: 'pointer',
+    animation: 'fadeInUp 2s ease-in-out infinite alternate',
+    transition: 'opacity 0.2s ease',
+
+    ':hover': {
+      opacity: '1',
+    },
+
+    onClick: (e, el) => {
+      var target = document.getElementById('contact')
+      if (target) target.scrollIntoView({ behavior: 'smooth' })
+    },
+
+    GridScrollIcon: {
+      extends: 'Icon',
+      icon: 'chevronDown',
+      width: 'B',
+      height: 'B',
+      color: 'cyber',
+    },
+  },
 }

@@ -128,7 +128,10 @@
 | 2 | `maxWidth: '700px'` — raw px violates Rule 28 | HeroSection.js | Fixed: changed to `'70%'` |
 | 3 | `maxWidth: '600px'` — raw px violates Rule 28 | ContactSection.js | Fixed: changed to `'60%'` |
 | 4 | `maxWidth: '1200px'` — raw px violates Rule 28 | BentoProjectGrid.js | Fixed: changed to `'90%'` |
-| 5 | Browser subagent protocol error prevents visual verification | N/A | Server responds correctly; title confirmed via URL read |
+| 5 | `theme-color` meta tag accidentally deleted during font import removal | index.html | Fixed: manually restored meta tag |
+| 6 | Redundant closing brace left in icon registry causing syntax error | icons.js | Fixed: removed extra brace |
+| 7 | Iterative scaling of sensitive clip-path components causes clipping | ToptalBadge.js | Fixed: switched to clean conversion via HTML snippet |
+| 8 | `width: 200px` — raw px violates Rule 28 | ToptalBadge.js | Fixed: mapped to token math `'F+A'` (~193px) |
 
 ---
 
@@ -139,6 +142,18 @@ Spacing: X(3px) Y(6px) Z(10px) A(16px) B(26px) C(42px) D(67px) E(109px) F(177px)
 Sub:     Z1 Z2 A1 A2 B1 B2 C1 C2
 Font:    Y(12.8px) Z(16px) A(20px) B(25px) C(31px) D(39px) E(49px) F(61px) G(76px) H(95px)
 ```
+
+---
+
+## Integration Strategy (Right vs Wrong)
+
+### Branding & 3rd Party Badges
+| ✅ Right | ❌ Wrong |
+|---|---|
+| Convert raw HTML/CSS via `symbols-mcp` first | Manually recreate complex SVG paths in DOMQL |
+| Map hardcoded dimensions to token math (e.g., `F+A` for 200px) | Use raw `px` values for "precision" |
+| Perform clean state resets (remove and re-add) when layout fails | Stack iterative 10% scaling attempts (leads to clipping) |
+| Centralize all branding SVGs in `icons.js` | Inline complex logos in the component file |
 
 ---
 

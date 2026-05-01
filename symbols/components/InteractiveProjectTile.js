@@ -30,16 +30,24 @@ export const InteractiveProjectTile = {
       },
 
       TileLinkIcon: {
-        extends: 'Icon',
-        icon: 'externalLink',
-        width: 'A',
-        height: 'A',
-        color: 'cyber',
+        tag: 'a',
+        attr: {
+          href: (el, s) => s.link || '#',
+          target: '_blank',
+          'aria-label': 'Project Link'
+        },
         opacity: '.5',
         transition: 'opacity 0.2s ease',
         ':hover': {
           opacity: '1',
         },
+        Icon: {
+          extends: 'Icon',
+          icon: 'externalLink',
+          width: 'A',
+          height: 'A',
+          color: 'cyber',
+        }
       },
     },
 

@@ -69,6 +69,7 @@ export default {
       title: 'Automated QA Test Run Dashboard',
       summary: 'A transactional execution environment for regression runs with high-density data grids and real-time metric aggregation.',
       tags: ['SQLite', 'API Middleware', 'Data Visualization'],
+      link: 'https://github.com/allenbrokeit/QA-Dashboard',
       bentoSize: 'medium',
     },
   ],

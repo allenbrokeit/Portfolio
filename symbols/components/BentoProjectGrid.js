@@ -1,7 +1,7 @@
 export const BentoProjectGrid = {
   tag: 'section',
   display: 'grid',
-  gridTemplateColumns: 'repeat(3, 1fr)',
+  gridTemplateColumns: 'repeat(2, 1fr)',
   gap: 'A',
   padding: '0 B',
   maxWidth: '90%',
@@ -13,9 +13,6 @@ export const BentoProjectGrid = {
     'aria-label': 'Project showcase grid',
   },
 
-  '@tabletS': {
-    gridTemplateColumns: 'repeat(2, 1fr)',
-  },
   '@mobileL': {
     gridTemplateColumns: '1fr',
     padding: '0 A',
@@ -36,13 +33,10 @@ export const BentoProjectGrid = {
 
   ProjectsContainer: {
     display: 'grid',
-    gridTemplateColumns: 'repeat(3, 1fr)',
+    gridTemplateColumns: 'repeat(2, 1fr)',
     gap: 'A',
     gridColumn: '1 / -1',
 
-    '@tabletS': {
-      gridTemplateColumns: 'repeat(2, 1fr)',
-    },
     '@mobileL': {
       gridTemplateColumns: '1fr',
     },

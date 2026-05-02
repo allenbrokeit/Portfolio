@@ -67,18 +67,4 @@ export const InteractiveProjectTile = {
       childExtends: 'TechBadge',
     },
   },
-
-  // Bento size variants using isX pattern
-  isLarge: (el, s) => s.bentoSize === 'large',
-  '.isLarge': {
-    gridColumn: 'span 2',
-    '@mobileL': {
-      gridColumn: 'span 1',
-    },
-  },
-
-  isMedium: (el, s) => s.bentoSize === 'medium',
-  '.isMedium': {
-    gridColumn: 'span 1',
-  },
 }

@@ -60,9 +60,10 @@ export default {
     },
     {
       id: 'proj_3',
-      title: 'Multi-Track Timeline Sequencer',
-      summary: 'A synchronized DAW-style timeline for sequencing high-density events with real-time DOM-to-time spatial manipulation.',
-      tags: ['DOMQL3', 'Algorithms', 'Performance'],
+      title: 'Symbols Tech Blog',
+      summary: 'A professional technical blog built with the Symbols.app framework, featuring reactive state management, dynamic routing, and a centralized design system with HSL color tokens.',
+      tags: ['DOMQL3', 'Design System', 'Dynamic Routing'],
+      link: 'https://github.com/allenbrokeit/SymbolsTechBlog',
       bentoSize: 'large',
     },
     {

@@ -53,9 +53,10 @@ export default {
     },
     {
       id: 'proj_2',
-      title: "Spatial 'Cyber-Deck' Lore Canvas",
-      summary: 'A free-form glassmorphism whiteboard environment for mapping intricate relationships with active Z-index stacking.',
-      tags: ['DOMQL3', 'Spatial Computing', 'UI/UX'],
+      title: 'Symbols Kanban',
+      summary: 'A dynamic Kanban board built with Symbols and DOMQL, featuring drag-and-drop task management, priority levels, and an integrated calendar view.',
+      tags: ['DOMQL3', 'State Management', 'Drag & Drop'],
+      link: 'https://github.com/allenbrokeit/SymbolsToDoList',
       bentoSize: 'medium',
     },
     {

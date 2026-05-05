@@ -48,6 +48,7 @@ export default {
       title: 'Visual Node-Based Automation Editor',
       summary: 'A spatial IDE for constructing automated test workflows via an infinite node-graph interface, featuring Bezier curve wiring and JSON serialization.',
       tags: ['DOMQL3', 'State Management', 'SVG Render'],
+      link: 'https://github.com/allenbrokeit/Automation-Editor',
       bentoSize: 'large',
     },
     {

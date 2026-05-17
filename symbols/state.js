@@ -75,5 +75,13 @@ export default {
       link: 'https://github.com/allenbrokeit/QA-Dashboard',
       bentoSize: 'medium',
     },
+    {
+      id: 'proj_5',
+      title: 'Contractor Pipeline',
+      summary: 'A CRM and project management dashboard designed for independent contractors to effectively track client engagements, manage project lifecycles, and monitor financial health.',
+      tags: ['DOMQL3', 'CRM', 'Financial Tracking'],
+      link: 'https://github.com/allenbrokeit/ContractorPipeline',
+      bentoSize: 'large',
+    },
   ],
 }

@@ -207,10 +207,10 @@
       });
     }
   }
-})({"8KtQC":[function(require,module,exports,__globalThis) {
+})({"lP6wk":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
-var HMR_PORT = null;
+var HMR_PORT = 1234;
 var HMR_SERVER_PORT = 1234;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "439701173a9199ea";
@@ -21432,7 +21432,9 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _mainJs = require("./main.js");
 exports.default = {
-    '/': (0, _mainJs.main)
+    '/': (0, _mainJs.main),
+    '/Portfolio/': (0, _mainJs.main),
+    '/*': (0, _mainJs.main)
 };
 
 },{"./main.js":"fguE9","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"fguE9":[function(require,module,exports,__globalThis) {
@@ -22004,6 +22006,6 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 exports.default = {};
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["8KtQC","edHeF"], "edHeF", "parcelRequirefc1b", {})
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["lP6wk","edHeF"], "edHeF", "parcelRequirefc1b", {})
 
 //# sourceMappingURL=symbols.24344e80.js.map

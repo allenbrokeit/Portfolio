@@ -7,7 +7,7 @@
   "repository": "https://github.com/symbo-ls/starter-kit",
   "scripts": {
     "start": "bunx smbls start",
-    "build": "bunx smbls build --no-brender",
+    "build": "NODE_ENV=production bunx smbls build --no-brender",
     "postbuild": "node scripts/fix-paths.js",
     "publish": "bunx smbls publish"
   },    "dependencies": {

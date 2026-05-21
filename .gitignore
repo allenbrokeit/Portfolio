@@ -39,4 +39,3 @@ node_modules
 # Parcel files
 .parcel-cache
 .cache
-dist

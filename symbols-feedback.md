@@ -142,6 +142,7 @@
 | 10 | Missing/Outdated external links for Projects 4 & 5 | state.js | Fixed: updated state with GitHub repo URLs |
 | 11 | `read_file` blocked on external workspace path (Security Policy) | N/A (Agent) | Fixed: used `cat` via `run_shell_command` as fallback |
 | 12 | 29 Frank-Audit findings (FA511, FA502, FA105, FA806, FA701) | Multiple | **Pending:** Needs project-wide refactor for full compliance |
+| 13 | `npm ci` fails with 404 for `@symbo.ls/wasm` dependency | `.github/workflows/deploy.yml` | Fixed: Replaced `npm ci \|\| npm install` with `bun install` as bun resolves the dependency correctly and matches the project's native tooling. |
 
 ---
 

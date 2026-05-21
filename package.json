@@ -7,12 +7,12 @@
   "repository": "https://github.com/symbo-ls/starter-kit",
   "scripts": {
     "start": "bunx smbls start",
-    "build": "bunx smbls build",
+    "build": "NODE_ENV=production bunx smbls build --no-brender",
+    "postbuild": "node scripts/fix-paths.js",
     "publish": "bunx smbls publish"
-  },
-  "dependencies": {
-    "smbls": "3.14.1"
-  },
+  },    "dependencies": {
+    "smbls": "3.14.135"
+    },
   "peerDependencies": {
     "@supabase/supabase-js": "^2.0.0"
   },
